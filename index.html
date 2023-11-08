@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impossible password generator</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script src="./scripts/global.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Impossible password generator</h1>
+      <label for="password-input">
+        <input id="password-input" type="text" />
+      </label>
+    </header>
+    <main>
+      <div class="error-message-container">
+        <ul id="error-message-list">
+          <!-- <li>
+            <div id="rule1" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">At least one lowercase letter</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule2" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">At least one uppercase letter</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule3" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">At least one digit</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule4" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">At least one special character</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule5" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">At least 4 connecting digits</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule6" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">Either a lower a, b or c</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule7" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">A random color</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule8" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">Capitol of Switzerland</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule9" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">A season in the year</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule10" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">An instrument</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule11" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">A valid email</p>
+            </div>
+          </li>
+          <li> -->
+            <div id="rule12" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">A valid German phone number</p>
+            </div>
+          </li>
+          <!-- <li>
+            <div id="rule13" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">A random car brand</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule14" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">ë</p>
+            </div>
+          </li>
+          <li> -->
+            <div id="rule15" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">
+                An abbreviation of an element in the periodic table
+              </p>
+            </div>
+          </li>
+          <!-- <li>
+            <div id="rule16" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">Current date in YYYY-MM-DD</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule17" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">My full name in capital letters</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule18" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">
+                The answer to (20 * 50) - (10 + 3) + (2^3)
+              </p>
+            </div>
+          </li> -->
+          <li>
+            <div id="rule19" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">30 spaces next to each other</p>
+            </div>
+          </li>
+          <!-- <li>
+            <div id="rule20" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">"wall" between rule 8 and 9</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule21" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">This site URL</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule22" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">
+                Scientist that discovered the laws of gravity
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="rule23" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">My favorite color</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule24" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">One of the big five companies</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule25" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">The latin name for skull</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule26" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">Your favorite color in HEX</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule27" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">
+                The bingo number that represents two little ducks
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="rule28" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">
+                The first woman on earth (according to Greek mythology)
+              </p>
+            </div>
+          </li>
+          <li>
+            <div id="rule29" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">The softest mineral in the world</p>
+            </div>
+          </li>
+          <li>
+            <div id="rule30" class="error-message-wrapper">
+              <h2 class="error-message-title">Error</h2>
+              <p class="description">The hottest planet in the solar system</p>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
