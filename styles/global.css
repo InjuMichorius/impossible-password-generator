@@ -12,6 +12,7 @@ header {
   left: 0;
   width: 100vw;
   padding: 100px 0 30px;
+  z-index: 100;
 }
 
 h1 {
@@ -30,24 +31,48 @@ header input {
 }
 
 main {
-  padding-top: 240px;
+  padding: 240px 15px;
   display: flex;
   gap: 10px;
   flex-direction: column;
   justify-content: center;
 }
 
+.error-message-container {
+  height: 100px;
+  overflow: hidden;
+}
+
+#error-message-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+  list-style-type: none;
+}
+
 .error-message-wrapper {
   color: #cc0033;
   border: 2px solid #cc0033;
   background-color: #fce4e4;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto 30px;
   border-radius: 5px;
   padding: 20px;
   display: flex;
   gap: 10px;
+  opacity: 1;
   flex-direction: column;
+  transition: opacity 0.4s 0.4s ease-out;
+}
+.error-message-wrapper.valid {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 10;
 }
 
 .valid {
@@ -60,5 +85,14 @@ main {
   padding: 20px;
   display: flex;
   gap: 10px;
-  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
 }

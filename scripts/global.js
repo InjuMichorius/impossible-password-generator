@@ -204,13 +204,10 @@ function checkPassword(e) {
   } else {
     rule11.classList.remove("valid");
   }
+  const dutchMobilePhoneNumberRegex = /^(?:(?:\+31|0|0031)[ -]?)?06[-\d]{8}$/;
 
   //Rule 12
-  if (
-    /^(?:(?:\+31|0|0031)[- ]?)?(?:(?:(?:[1-9][0-9])\d{0,7})|(?:6[\d]{7})|(?:[1-9][0-9]{1,7}[- ]\d{2,8}[- ]\d{0,9}))$/.test(
-      value
-    )
-  ) {
+  if (dutchMobilePhoneNumberRegex.test(value)) {
     rule12.classList.add("valid");
   } else {
     rule12.classList.remove("valid");
@@ -414,7 +411,7 @@ function checkPassword(e) {
   }
 
   //Rule 19
-  if (/ {30}$/.test(value)) {
+  if (/ {29}$/.test(value)) {
     rule19.classList.add("valid");
   } else {
     rule19.classList.remove("valid");
