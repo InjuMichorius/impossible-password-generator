@@ -424,7 +424,8 @@ function checkPassword(e) {
   }
 
   //Rule 21
-  const currentURL = window.location.href;
+  const currentURL =
+    "https://injumichorius.github.io/impossible-password-generator/";
   const urlPattern = new RegExp(currentURL);
   if (urlPattern.test(value)) {
     rule21.classList.add("valid");
