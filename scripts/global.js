@@ -196,18 +196,17 @@ function checkPassword(e) {
   }
 
   //Rule 11
-  const emailValidationRegex =
-    /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/;
+  const emailValidationRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/;
 
   if (emailValidationRegex.test(value)) {
     rule11.classList.add("valid");
   } else {
     rule11.classList.remove("valid");
   }
-  const dutchMobilePhoneNumberRegex = /^(?:(?:\+31|0|0031)[ -]?)?06[-\d]{8}$/;
+  const dutchPhoneNumberRegex = /(?:(?:\+31|0|0031)?6\d{8})/;
 
   //Rule 12
-  if (dutchMobilePhoneNumberRegex.test(value)) {
+  if (dutchPhoneNumberRegex.test(value)) {
     rule12.classList.add("valid");
   } else {
     rule12.classList.remove("valid");
@@ -411,7 +410,7 @@ function checkPassword(e) {
   }
 
   //Rule 19
-  if (/ {29}$/.test(value)) {
+  if (/ {29}/.test(value)) {
     rule19.classList.add("valid");
   } else {
     rule19.classList.remove("valid");
@@ -441,7 +440,7 @@ function checkPassword(e) {
   }
 
   //Rule 23
-  if (/Orange/.test(value)) {
+  if (/Orange/i.test(value)) {
     rule23.classList.add("valid");
   } else {
     rule23.classList.remove("valid");
@@ -462,7 +461,7 @@ function checkPassword(e) {
   }
 
   //Rule 26
-  if (/#[0-9A-Fa-f]{6}$/.test(value)) {
+  if (/#[0-9A-Fa-f]{6}/.test(value)) {
     rule26.classList.add("valid");
   } else {
     rule26.classList.remove("valid");

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Hacked";
+  src: url("../font/hacked.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +24,7 @@ canvas {
 
 body {
   background-color: black;
+  overflow: hidden;
 }
 
 header {
@@ -27,20 +33,31 @@ header {
 }
 
 h1 {
+  display: block;
   margin-bottom: 30px;
   text-align: center;
   font-weight: 700;
-  color: white;
+  color: #43c728;
+  font-family: "Hacked", Fallback, sans-serif;
 }
 
 header input {
+  color: #43c728;
+  font-size: 24px;
   width: 100%;
-  max-width: 400px;
-  height: 42px;
+  max-width: 600px;
+  height: 60px;
   margin: auto;
   display: block;
   padding: 0 10px;
   border-radius: 5px;
+  border: 2px solid #18191a;
+  background-color: #242526;
+}
+
+header input:focus {
+  outline: transparent;
+  border: 2px solid #43c728;
 }
 
 main {
