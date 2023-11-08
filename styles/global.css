@@ -98,6 +98,15 @@ main {
   flex-direction: column;
   transition: opacity 0.4s 0.4s ease-out;
 }
+
+.error-message-title {
+  font-size: 22px;
+}
+
+.description {
+  font-size: 18px;
+}
+
 .error-message-wrapper.valid {
   position: absolute;
   opacity: 0;
@@ -124,5 +133,19 @@ main {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 24px;
+  }
+  .error-message-container {
+    height: 95px;
+  }
+  .error-message-wrapper {
+    padding: 10px;
+    gap: 5px;
+  }
+  .error-message-title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
   }
 }
