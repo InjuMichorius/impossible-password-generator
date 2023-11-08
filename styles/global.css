@@ -24,7 +24,8 @@ canvas {
 
 body {
   background-color: black;
-  overflow: hidden;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 header {
