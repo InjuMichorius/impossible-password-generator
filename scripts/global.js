@@ -403,7 +403,7 @@ function checkPassword(e) {
   }
 
   //Rule 18
-  if (/2001/.test(value)) {
+  if (/995/.test(value)) {
     rule18.classList.add("valid");
   } else {
     rule18.classList.remove("valid");
@@ -492,12 +492,4 @@ function checkPassword(e) {
   } else {
     rule30.classList.remove("valid");
   }
-}
-
-function createErrorMessage(errorMessage) {
-  const listItem = document.createElement("li");
-  const textContent = document.createTextNode(errorMessage);
-  listItem.appendChild(textContent);
-  const list = document.getElementById("error-message-list");
-  list.appendChild(listItem);
 }

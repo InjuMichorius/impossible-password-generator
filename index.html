@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/global.css" />
     <script src="./scripts/global.js" defer></script>
     <script src="./scripts/background.js" defer></script>
+    <script src="./scripts/copy.js" defer></script>
   </head>
   <body>
     <header>
@@ -20,19 +21,19 @@
         <ul id="error-message-list">
           <li>
             <div id="rule1" class="error-message-wrapper">
-              <h2 class="error-message-title">At least one lowercase letter</h2>
+              <h2 class="error-message-title">Error</h2>
               <p class="description">At least one lowercase letter</p>
             </div>
           </li>
           <li>
             <div id="rule2" class="error-message-wrapper">
-              <h2 class="error-message-title">At least one uppercase letter</h2>
+              <h2 class="error-message-title">Error</h2>
               <p class="description">At least one uppercase letter</p>
             </div>
           </li>
           <li>
             <div id="rule3" class="error-message-wrapper">
-              <h2 class="error-message-title">At least one digit</h2>
+              <h2 class="error-message-title">Error</h2>
               <p class="description">At least one digit</p>
             </div>
           </li>
@@ -63,7 +64,7 @@
           <li>
             <div id="rule8" class="error-message-wrapper">
               <h2 class="error-message-title">Error</h2>
-              <p class="description">Capitol of Switzerland</p>
+              <p class="description">Capital of Switzerland</p>
             </div>
           </li>
           <li>
@@ -119,7 +120,7 @@
           <li>
             <div id="rule17" class="error-message-wrapper">
               <h2 class="error-message-title">Error</h2>
-              <p class="description">My full name in capital letters</p>
+              <p class="description">My full name</p>
             </div>
           </li>
           <li>
@@ -208,6 +209,11 @@
               <p class="description">The hottest planet in the solar system</p>
             </div>
           </li>
+          <div class="copy-container">
+            <button onclick="copyPassword()" class="copy-button">
+              Copy password! <img src="./images/copy.svg" alt="" />
+            </button>
+          </div>
         </ul>
       </div>
     </main>
